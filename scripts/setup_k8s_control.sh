@@ -70,6 +70,19 @@ sleep 1
 
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+
+# Helm 
+curl -LO https://get.helm.sh/helm-v3.17.3-linux-amd64.tar.gz
+tar -zxvf helm-v3.17.3-linux-amd64.tar.gz
+sudo mv linux-amd64/helm /usr/local/bin/helm
+rm -rf helm-v3.17.3-linux-amd64.tar.gz
+
+# update repo helm 
+helm version
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
 
 # Get images
 sudo kubeadm config images pull
