@@ -1,7 +1,6 @@
 # AGENTS.md - Kubernetes Cluster Terraform Project
 
-**Author**: Evaggelos Balaskas
-**Date Created**: Fri Mar 20 2026
+**Author**: SANZOUANGO NOAH Israel Samuel
 
 ---
 
